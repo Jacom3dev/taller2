@@ -1,0 +1,16 @@
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.exe
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.deps.json
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.runtimeconfig.json
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.runtimeconfig.dev.json
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.dll
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\ref\taller.dll
+C:\cursos\C#\practicas\taller\taller\bin\Debug\net5.0\taller.pdb
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.csprojAssemblyReference.cache
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.GeneratedMSBuildEditorConfig.editorconfig
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.AssemblyInfoInputs.cache
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.AssemblyInfo.cs
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.csproj.CoreCompileInputs.cache
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.dll
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\ref\taller.dll
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.pdb
+C:\cursos\C#\practicas\taller\taller\obj\Debug\net5.0\taller.genruntimeconfig.cache

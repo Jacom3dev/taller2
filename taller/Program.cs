@@ -1,4 +1,6 @@
 ﻿using System;
+using taller.Modelo;
+using taller.Servicios;
 
 namespace taller
 {
@@ -7,11 +9,11 @@ namespace taller
         
         static void Main(string[] args)
         {
+            ServicioCliente _servicioCliente = new();
+            Cliente cliente = new();
+
             bool configuration = false;
-            Configuracion conf = new();
-            ModuloCliente moduloCliente = new();
-            ModuloProducto moduloProducto =new ();
-            Configuracion configuracion = new();
+          
             byte Opcion;
             bool salir = true;
             while (salir)
@@ -31,12 +33,37 @@ namespace taller
                 switch (Opcion)
                 {
                     case 1:
-                        
+                       
+
+                        Console.WriteLine("1) crear cliente");
+                        int opcion = int.Parse(Console.ReadLine());
+
+                        switch (opcion)
+                        {
+                            case 1:
+                                
+                                Console.WriteLine("Nombre");
+                                cliente.Nombre = Console.ReadLine();
+                                Console.WriteLine("cedula");
+                                cliente.Codigo  = Console.ReadLine();
+                                Console.WriteLine("telefono");
+                                cliente.Telefono = Console.ReadLine();
+                                Console.WriteLine("dirreccion");
+                                cliente.Dirrecion = Console.ReadLine();
+
+
+                                _servicioCliente.AgregarCliente(cliente);
+                                _servicioCliente.ListarClientes();
+
+                                break;
+                            default:
+                                break;
+                        }
+
                         if (configuration)
                         {
                             Console.Clear();
-                            conf.MostrarNombre();
-                            moduloCliente.Clientes();
+                           
                         }
                         else
                         {
@@ -49,8 +76,7 @@ namespace taller
                         if (configuration)
                         {
                             Console.Clear();
-                            conf.MostrarNombre();
-                            moduloProducto.Productos();
+                           
                         }
                         else
                         {
@@ -59,13 +85,13 @@ namespace taller
                         
                         break;
                     case 3:
+                        
                         break;
                     case 4:
                         break;
                     case 5:
                         Console.Clear();
-                        configuration = true;
-                        configuracion.PerdirNombre();
+                       
                         break;
                     case 6:
                         salir = false;

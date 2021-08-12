@@ -26,16 +26,17 @@ namespace taller.Servicios
                     if (cliente.Codigo != item.Codigo)
                     {
                         listaClientes.Add(cliente);
+                        existe = true;
                     }
+                }
+                if (!existe)
+                {
+                    Console.WriteLine("El usuario ya existe");
                 }
             }
 
            
 
-            if (existe)
-            {
-                Console.WriteLine("El usuario ya existe");
-            }
 
             
         }

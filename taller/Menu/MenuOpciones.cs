@@ -30,5 +30,25 @@ namespace taller.Menu
                   "5)\t salir\n" +
                   "....................");
         }
+
+        public void MenuProducto()
+        {
+            Console.WriteLine("....................\n" +
+                             "1)\t Crear Producto\n" +
+                             "2)\t Buscar Producto\n" +
+                             "3)\t Eliminar Producto\n" +
+                             "4)\t Modificar Producto\n" +
+                             "5)\t salir\n" +
+                             "....................");
+        }
+        public void MenuReportes()
+        {
+            Console.WriteLine("....................\n" +
+                             "1)\t Listar Clientes\n" +
+                             "2)\t listar productos\n" +
+                             "3)\t listar Facturas\n" +
+                             "4)\t salir\n" +
+                             "....................");
+        }
     }
 }

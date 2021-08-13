@@ -8,10 +8,10 @@ namespace taller.Modelo
 {
     public  class Cliente
     {
-        public string Nombre { get; set; }
-        public string Dirrecion { get; set; }
-        public string Telefono { get; set; }
-        public string Codigo { get; set; }
+        public string Nombre;
+        public string Dirrecion;
+        public string Telefono;
+        public string Codigo;
 
     }
 }

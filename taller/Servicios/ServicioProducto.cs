@@ -91,8 +91,27 @@ namespace taller.Servicios
             }
         }
 
-        public void ModificarProducto()
+        public void ModificarProducto(string codigoEditar, Producto modificar)
         {
+            bool existe = false;
+            foreach (var item in listaProductos)
+            {
+                if (item.Codigo == codigoEditar)
+                {
+                    existe = true;
+
+                    item.Nombre = modificar.Nombre;
+                    item.Cantidad = modificar.Cantidad;
+                    item.Precio = modificar.Precio;
+                    item.Codigo = modificar.Codigo;
+
+                }
+
+            }
+            if (!existe)
+            {
+                Console.WriteLine("El Cliente no existe");
+            }
 
         }
 
@@ -110,6 +129,89 @@ namespace taller.Servicios
                 }
             }
            
+        }
+        public void DiezProductos()
+        {
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "Nike",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "1"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "adidas",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "2"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "puma",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "3"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "gucci",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "4"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "Louis Vuitton",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "5"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "Chanel",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "6"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "Cartier",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "7"
+            }
+            );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "H&M",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "8"
+            }
+             );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "Supreme",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "9"
+            }
+           );
+            listaProductos.Add(new Producto()
+            {
+                Nombre = "lacoste",
+                Precio = 100000,
+                Cantidad = 3,
+                Codigo = "10"
+            }
+          );
         }
     }
 }

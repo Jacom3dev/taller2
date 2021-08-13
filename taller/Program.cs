@@ -9,6 +9,7 @@ namespace taller
         
         static void Main(string[] args)
         {
+            string NombreEmpresa = null;
             MenuOpciones menuOpciones = new();
             ServicioCliente _servicioCliente = new();
             ServicioProducto _servicioProducto = new();
@@ -17,6 +18,10 @@ namespace taller
             bool salir = true;
             while (salir)
             {
+                if (NombreEmpresa != null)
+                {
+                    Console.WriteLine($"Bienvenidos a {NombreEmpresa}");
+                }
                 menuOpciones.MenuPrincipal();
                 Console.Write("Elija la opcion requerida: ");
                 Opcion = byte.Parse(Console.ReadLine());
@@ -31,6 +36,10 @@ namespace taller
                        
                         while (salir2)
                         {
+                            if (NombreEmpresa != null)
+                            {
+                                Console.WriteLine($"Bienvenidos a {NombreEmpresa}");
+                            }
                             menuOpciones.MenuCliente();
                             Console.Write("Elija la opcion requerida: ");
                             int opcion = int.Parse(Console.ReadLine());
@@ -78,6 +87,32 @@ namespace taller
                                     Console.Write("Numero de cedula: ");
                                     string codigoEditar = Console.ReadLine();
 
+                                    if (codigoEditar != "")
+                                    {
+                                        Console.Write("Nombre: ");
+                                        string nombre = Console.ReadLine();
+                                        Console.Write("cedula: ");
+                                        string codigo = Console.ReadLine();
+                                        Console.Write("telefono: ");
+                                        string telefono = Console.ReadLine();
+                                        Console.Write("dirreccion: ");
+                                        string dirrecion = Console.ReadLine();
+                                        _servicioCliente.ModificarCliente(codigoEditar, new Cliente()
+                                        {
+                                            Nombre = nombre,
+                                            Codigo = codigo,
+                                            Telefono = telefono,
+                                            Dirrecion = dirrecion
+                                        }
+                                        );
+
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digita el numero de cedula");
+                                    }
+
                                     break;
                                 case 5:
                                     salir2 = false;
@@ -91,6 +126,7 @@ namespace taller
                
 
                         }
+
                         break;
                     case 2:
                         Producto producto = new();
@@ -99,6 +135,10 @@ namespace taller
 
                         while (salir3)
                         {
+                            if (NombreEmpresa != null)
+                            {
+                                Console.WriteLine($"Bienvenidos a {NombreEmpresa}");
+                            }
                             menuOpciones.MenuProducto();
                             Console.Write("Elija la opcion requerida: ");
                             int opcion = int.Parse(Console.ReadLine());
@@ -145,6 +185,33 @@ namespace taller
                                     Console.Write("codigo producto: ");
                                     string codigoEditar = Console.ReadLine();
 
+                                    if (codigoEditar != "")
+                                    {
+                                        Console.Write("Nombre: ");
+                                        string nombre = Console.ReadLine();
+                                        Console.Write("precio: ");
+                                        int Precio = int.Parse(Console.ReadLine());
+                                        Console.Write("cantidad: ");
+                                        int Cantidad = int.Parse(Console.ReadLine());
+                                        Console.Write("codigo: ");
+                                        string Codigo = Console.ReadLine();
+                                        _servicioProducto.ModificarProducto(codigoEditar, new Producto()
+                                        {
+                                            Nombre = nombre,
+                                            Precio = Precio,
+                                            Cantidad = Cantidad,
+                                            Codigo = Codigo
+                                        }
+                                        );
+
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digita el codigo");
+                                    }
+
+
                                     break;
                                 case 5:
                                     salir3 = false;
@@ -166,7 +233,12 @@ namespace taller
                         bool salir4 = true;
                         while (salir4)
                         {
+                            if (NombreEmpresa != null)
+                            {
+                                Console.WriteLine($"Bienvenidos a {NombreEmpresa}");
+                            }
                             menuOpciones.MenuReportes();
+                            Console.Write("Elija la opcion requerida: ");
                             int opcion = int.Parse(Console.ReadLine());
                             switch (opcion)
                             {
@@ -195,8 +267,17 @@ namespace taller
                         }
                         break;
                     case 5:
-                        
-
+                        Console.WriteLine("------ Configuracion ------");
+                        Console.Write("Digite el nombre de la empresa: ");
+                        NombreEmpresa = Console.ReadLine();
+                        Console.Write("si o no: ");
+                        string respuesta = Console.ReadLine();
+                        if (respuesta.Equals("si"))
+                        {
+                            _servicioCliente.DiezClientes();
+                            _servicioProducto.DiezProductos();
+                        }
+                        Console.Clear();
                         break;
                     case 6:
                         salir = false;

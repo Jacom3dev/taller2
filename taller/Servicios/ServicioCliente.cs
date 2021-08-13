@@ -91,8 +91,27 @@ namespace taller.Servicios
             }
         }
 
-        public void ModificarCliente()
+        public void ModificarCliente(string codigoEditar, Cliente modificar)
         {
+            bool existe = false;
+            foreach (var item in listaClientes)
+            {
+                if (item.Codigo == codigoEditar)
+                {
+                    existe = true;
+
+                    item.Nombre = modificar.Nombre;
+                    item.Codigo = modificar.Codigo;
+                    item.Dirrecion = modificar.Dirrecion;
+                    item.Telefono = modificar.Telefono;
+
+                }
+
+            }
+            if (!existe)
+            {
+                Console.WriteLine("El Cliente no existe");
+            }
 
         }
 
@@ -110,6 +129,91 @@ namespace taller.Servicios
                 }
             }
            
+        }
+
+        public void DiezClientes()
+        {
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "jose",
+                Codigo = "1234",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "julian",
+                Codigo = "12345",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "jacome",
+                Codigo = "123456",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "martinez",
+                Codigo = "1234567",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+           );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "camilo",
+                Codigo = "12345678",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "juan",
+                Codigo = "123456789",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "ali",
+                Codigo = "98765",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "rayo",
+                Codigo = "987654",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "mariana",
+                Codigo = "9876543",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+            );
+            listaClientes.Add(new Cliente()
+            {
+                Nombre = "laura",
+                Codigo = "987654321",
+                Telefono = "00000",
+                Dirrecion = "cr99"
+            }
+           );
         }
 
     }
